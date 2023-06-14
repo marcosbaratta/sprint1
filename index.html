@@ -9,20 +9,30 @@
 </head>
 <body>
     <div class="landscape-cards">
+
         <div class="frontcard-landscape">
+            <span class="frontcard-numbers">0000 0000 0000 0000</span>
+            <span class="frontcard-name">Jane Appleseed</span>
+            <span class="frontcard-exp">00/00</span>
             <img src="./interactive-card-form/images/bg-card-front.png" alt="frente de tarjeta">
         </div>
         <div class="backcard-landscape">
             <img src="./interactive-card-form/images/bg-card-back.png" alt="detras tarjeta">
+            <span class="backcard-cvc">000</span>
         </div>
     </div>
 
     <div class="mobile-cards">
         <div class="backcard-mobile">
             <img src="./interactive-card-form/images/bg-card-back.png" alt="detras tarjeta">
+            <span class="backcard-mobile-cvc">000</span>
         </div>
         <div class="frontcard-mobile">
             <img src="./interactive-card-form/images/bg-card-front.png" alt="frente de tarjeta">
+            <span class="frontcard-mobile-numbers">0000 0000 0000 0000</span>
+            <span class="frontcard-mobile-name">Jane Appleseed</span>
+            <span class="frontcard-mobile-exp">00/00</span>
+
         </div>
 
     </div>
@@ -32,29 +42,29 @@
         <form method="post"  class="form-flex">
             <div class="form-field">
                 <label for="name"> CARDHOLDER NAMER</label>
-                <input id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" class="inputCard">
+                <input id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" class="inputCard input-field">
             </div>
             <div class="form-field">
                 <label for="card">CARD NUMBER</label>
-                <input id="card" type="text" name="card" placeholder="e.g. 1234 5678 9123 0000" class="inputCard">      
+                <input id="card" type="text" name="card" placeholder="e.g. 1234 5678 9123 0000" class="inputCard input-field">      
             </div>
             <div>
-                <div class="form-separation">
+                <div class="form-separation form-field">
                     <div>    
                         <label for="expdatemm">EXP. DATE (MM/YY)</label>
                             <div class="form-separation2">
-                                <input id="expdatemm" type="text" name="expdate" maxlength="2" placeholder="MM" class="inputMMYY">
-                                <input id="expdateyy" type="text" name="expdateyy" maxlength="2" placeholder="YY" class="inputMMYY">
+                                <input id="expdatemm" type="text" name="expdate" maxlength="2" placeholder="MM" class="inputMMYY input-field">
+                                <input id="expdateyy" type="text" name="expdateyy" maxlength="2" placeholder="YY" class="inputMMYY input-field">
                             </div>    
                     </div>
                     <div>
-                        <label for="cvc">CVC</label>
-                        <input  type="text" id="cvc" name="cvc" maxlength="3" placeholder="123" class="inputCVC">
+                        <label class='label-form' for="cvc">CVC</label>
+                        <input  type="text" id="cvc" name="cvc" maxlength="3" placeholder="123" class="inputCVC input-field">
                     </div>
                 </div>
 
             </div>    
-            <button class="form-button" style="display:block" type="submit">Confirm</button>
+            <button class="form-button" type="submit">Confirm</button>
 
 
             
