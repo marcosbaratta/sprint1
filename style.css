@@ -52,6 +52,7 @@ body {
 
 
 
+
 .frontcard-mobile{
     position:relative;
     left: 5%;
@@ -122,16 +123,21 @@ body {
     display: flex;
     width: 130px;
     flex-wrap: nowrap;
+    justify-content: space-around;
 
     
 }
 input{
-    margin-top: 2%;
+
     padding: 10px;
+    border-color: rgba(229, 233, 236, 0.822);
+    border-radius: 5px;
+    
 }
 
  .inputMMYY{
-    width:50%;
+    width:45%;
+    
 }
 
 .inputCVC{
@@ -166,14 +172,13 @@ input{
     }
 
 label{
-    padding: 10px;
+
+    padding: 5px;
     font-size: 0.7rem;
 }
 
 .input-field{
     height: 30px;
-    border-radius: 3px;
-    border-color: hsl(249, 99, 64);
 }
 
 .backcard-landscape{
@@ -220,7 +225,13 @@ label{
     transform: translate(-50%, -50%);
     font-size: 1.3vw;
 }
+#landscape-icon{
+    position:absolute;
+    top: 10%;
+    left:30%;
+    width: 8%;
 
+}
 
 
 
@@ -248,8 +259,16 @@ label{
     .mobile-cards{
         display:block;
     }
-    img{
+    .landscape-cards img{
        width: 300px;
        height: auto;
     }
+    #mobile-icon{
+        position:absolute;
+        top:10%;
+        left:10%;
+        width: 12%;
+
+    }
+
 }
