@@ -52,16 +52,16 @@
     </div>
 
     <div id="form-container" class="form-container">
-        <form method="post"  class="form-flex">
+        <form id="form" method="post"  class="form-flex">
             <div class="form-field">
                 <label for="name"> CARDHOLDER NAMER</label>
                 <input id="name" type="text" name="name" placeholder="e.g. Jane Appleseed" class="inputCard input-field">
-                <span class="error"></span>
+                <span id="name-error" class="error">invalid name</span>
             </div>
             <div class="form-field">
                 <label for="card">CARD NUMBER</label>
-                <input id="card" type="text" name="card" placeholder="e.g. 1234 5678 9123 0000" class="inputCard input-field" maxlength="16"> 
-                <span class="error"></span>     
+                <input id="card" type="number" name="card" placeholder="e.g. 1234 5678 9123 0000" class="inputCard input-field" maxlength="16"> 
+                <span id="card-error" class="error">invalid card number</span>     
             </div>
             <div>
                 <div class="form-separation form-field">
@@ -71,12 +71,12 @@
                                 <input id="expdatemm" type="text" name="expdate" maxlength="2" placeholder="MM" class="inputMMYY input-field">
                                 <input id="expdateyy" type="text" name="expdateyy" maxlength="2" placeholder="YY" class="inputMMYY input-field">
                             </div>
-                            <span class="error"></span>    
+                            <span id="expdate-error" class="error">invalid exp date</span>    
                     </div>
                     <div>
                         <label class="label-form" for="cvc">CVC</label>
                         <input  type="text" id="cvc" name="cvc" maxlength="3" placeholder="123" class="inputCVC input-field">
-                        <span class="error"></span>
+                        <span id="cvc-error" class="error">invalid CVC</span>
                     </div>
                     
                 </div>

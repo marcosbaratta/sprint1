@@ -22,11 +22,15 @@ formCVC.addEventListener('input',actualizarMobileCVC);
 const complete = document.getElementById('complete');
 const formButton = document.getElementById('form-button');
 const formContainer = document.getElementById('form-container');
-formButton.addEventListener('click', ()=>{
-    complete.style.display = "flex";
-    formContainer.style.display = "none"
+const form = document.getElementById('form');
+const boton = document.getElementById('boton');
 
-})
+boton.addEventListener('click', ()=>{
+    complete.style.display = "none";
+    form.reset();
+    formContainer.style.display = "flex";
+}) 
+
 
 
 
@@ -87,17 +91,63 @@ function actualizarMobileCVC(){
     mobileBackCardCVC.textContent = formCVC.value;
 }
 
-//SEPARA DE A 4 LOS NUMEROS DE LA TARJETA
 
-// function grupotarjeta(number) {
-   
-//     const groups = [];
-//     for (let i = 0; i < number.length; i += 4) {
-//         groups.push(number.slice(i, i + 4));
-//     }
+
+// VALIDACIONES
+
+formNumbers.addEventListener('input', function() {
+    if (this.value.length >= 16) {
+      this.value = this.value.slice(0, 15);
+    }
+  });
+
+
+const nameError = document.getElementById('name-error');
+const cardError = document.getElementById('card-error');
+const expDateError = document.getElementById('expdate-error');
+const cvcError = document.getElementById('cvc-error');
+
+
+formButton.addEventListener('click',()=>{
+    let a = 0;
+    if(formName.value.length<2){
+        nameError.style.display = "inline";
+        a+=1;
+    }
+    if(formNumbers.value.length!=15){
+        cardError.style.display = "inline";
+        a+=1;
+    }
+    if(formMonth.value > 12 || formYear.value <23 || isNaN(formMonth.value) || isNaN(formYear.value)) {
+        expDateError.style.display = "inline";
+        a+=1;
+    }
     
-//     const numerostarjeta = groups.join(' ');
+    if(formCVC.value.length !==3 || isNaN(formCVC.value)){
+        cvcError.style.display = "inline";
+        a+=1;
+    }
+    if(a==0){
+        formContainer.style.display = "none";
+        complete.style.display = "flex";
+    }
+}   
+);
 
-//     return numerostarjeta;
-// }
+
+
+
+
+
+
+
+
+// CUANDO EL FORMULARIO ESTA TODO OK
+
+// formButton.addEventListener('click', ()=>{
+//     complete.style.display = "flex";
+//     formContainer.style.display = "none"
+
+// })
+
 

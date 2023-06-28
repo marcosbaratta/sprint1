@@ -163,7 +163,7 @@ input{
 }
 
 .landscape-cards img{
-    width: 50%;
+    width: 60%;
     
 }
 
@@ -257,7 +257,26 @@ label{
 .error{
     font-size: 0.5rem;
     color: red;
+    height: 10px;
 }
+
+#name-error{
+    display:none;
+}
+
+#card-error{
+    display: none;
+}
+
+#expdate-error{
+    display: none;
+}
+
+#cvc-error{
+    display:none;
+}
+
+
 
 
 @media (max-width: 719px) {
